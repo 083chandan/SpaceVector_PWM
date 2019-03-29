@@ -85,18 +85,17 @@ void loop() {
     sector = 1;
   }
   //  uncomment this for Waveforms on serial plotter
-  Serial.print(bitRead(PORTB, 0) + 7.5);
-  Serial.print(',');
-  Serial.print(bitRead(PORTB, 1) + 6);
-  Serial.print(',');
-  Serial.print(bitRead(PORTB, 2) + 4.5);
-  Serial.print(',');
-  Serial.print(bitRead(PORTB, 3) + 3);
-  Serial.print(',');
-  Serial.print(bitRead(PORTB, 4) + 1.5);
-  Serial.print(',');
-  Serial.println(bitRead(PORTB, 5));
-  //  delay(10);
+  //   Serial.print(bitRead(PORTB, 0) + 7.5);
+  //   Serial.print(',');
+  //   Serial.print(bitRead(PORTB, 1) + 6);
+  //   Serial.print(',');
+  //   Serial.print(bitRead(PORTB, 2) + 4.5);
+  //   Serial.print(',');
+  //   Serial.print(bitRead(PORTB, 3) + 3);
+  //   Serial.print(',');
+  //   Serial.print(bitRead(PORTB, 4) + 1.5);
+  //   Serial.print(',');
+  //   Serial.println(bitRead(PORTB, 5));
 }
 
 ISR(TIMER1_COMPA_vect) {
