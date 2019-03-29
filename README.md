@@ -1,6 +1,11 @@
 # Space Vector PWM generation using Atmega 2560
 
+(Arduino Mega) <br>
 Using Timer 1, Timer 3 and Timer 4 in the microcontroller to generate 6 PWMs
+
+**PWMmicros:** PWM period is in **Micro Seconds**. <br>
+**PWMmillis:** PWM period is in **Milli Seconds**.
+> Both PWMmicros and PWMmillis generate same waveform with timing change.
 
 **Counter calculation:** <br>
 *counter = (frequency * time)/prescaler* <br>
