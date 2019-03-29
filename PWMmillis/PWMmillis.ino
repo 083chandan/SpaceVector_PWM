@@ -96,7 +96,6 @@ void loop() {
   //    Serial.print(bitRead(PORTB, 4) + 1.5);
   //    Serial.print(',');
   //    Serial.println(bitRead(PORTB, 5));
-  //  delay(10);
 }
 
 ISR(TIMER1_COMPA_vect) {
