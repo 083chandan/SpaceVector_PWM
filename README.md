@@ -2,11 +2,11 @@
 
 (Arduino Mega) 
 
-Using Timer 1, Timer 3 and Timer 4 in the microcontroller to generate 6 PWMs
+Using Timer 1, Timer 3, Timer 4 and Timer 5 in the microcontroller to generate 6 varying PWMs
 
-**PWMmicros:** PWM period is in **Micro Seconds**. 
+**PWMmicros:** PWM period is in **Micro Seconds**. Uses 256 as prescaler for the counter.
 
-**PWMmillis:** PWM period is in **Milli Seconds**.
+**PWMmillis:** PWM period is in **Milli Seconds**. Uses 1 as prescaler for the counter.
 
 > Both PWMmicros and PWMmillis generate same waveform with timing change.
 
@@ -37,7 +37,7 @@ counter = (frequency * time)/prescaler
 
 
 
-
+![img](https://github.com/083chandan/SpaceVector_PWM/blob/master/refrences/Timing%20diagram/Waveforms%20Timings.png)
 
 ![1553932476551](https://github.com/083chandan/SpaceVector_PWM/blob/master/refrences/Sector.png)
 
