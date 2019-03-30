@@ -39,7 +39,7 @@ counter = (frequency * time)/prescaler
 
 
 
-![1553932476551](C:\Users\Chandan\AppData\Roaming\Typora\typora-user-images\1553932476551.png)
+![1553932476551](https://github.com/083chandan/SpaceVector_PWM/blob/master/refrences/Sector.png)
 
 ![img](http://1.bp.blogspot.com/-Pp_9dZX434A/UeaA5XiMEuI/AAAAAAAAAIY/tNYQzwg6n1I/s280/pattern+sectors.jpg)
 
