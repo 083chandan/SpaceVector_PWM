@@ -13,6 +13,8 @@ const uint16_t t4_compB = 62864;
 const uint16_t t5_compA = 61232;
 const uint16_t t5_compB = 63440;
 
+const unsigned int delayUS = 2;
+
 int sector = 1;
 
 void setup() {
@@ -99,9 +101,9 @@ void setup() {
 
   //  enable global interrupts
   sei();
-  bitSet(PORTB, 3); //S4
-  bitSet(PORTB, 4); //S6
-  bitSet(PORTB, 5); //S2
+  //  bitSet(PORTB, 3); //S4
+  //  bitSet(PORTB, 4); //S6
+  //  bitSet(PORTB, 5); //S2
 }
 
 void loop() {
@@ -130,26 +132,32 @@ ISR(TIMER1_COMPA_vect) {
   switch (sector) {
     case 1:
       bitClear(PORTB, 3); //S4
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 0); //S1
       break;
     case 2:
       bitClear(PORTB, 4); //S6
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 1); //S3
       break;
     case 3:
       bitClear(PORTB, 4); //S6
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 1); //S3
       break;
     case 4:
       bitClear(PORTB, 5); //S2
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 2); //S5
       break;
     case 5:
       bitClear(PORTB, 5); //S2
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 2); //S5
       break;
     case 6:
       bitClear(PORTB, 3); //S4
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 0); //S1
       break;
   }
@@ -161,26 +169,32 @@ ISR(TIMER1_COMPB_vect) {
   switch (sector) {
     case 1:
       bitClear(PORTB, 0); //S1
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 3); //S4
       break;
     case 2:
       bitClear(PORTB, 1); //S3
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 4); //S6
       break;
     case 3:
       bitClear(PORTB, 1); //S3
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 4); //S6
       break;
     case 4:
       bitClear(PORTB, 2); //S5
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 5); //S2
       break;
     case 5:
       bitClear(PORTB, 2); //S5
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 5); //S2
       break;
     case 6:
       bitClear(PORTB, 0); //S1
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 3); //S4
       break;
   }
@@ -206,18 +220,21 @@ ISR(TIMER3_COMPA_vect) {
   switch (sector) {
     case 1:
       bitClear(PORTB, 4); //S6
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 1); //S3
       break;
     case 2:
       break;
     case 3:
       bitClear(PORTB, 5); //S2
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 2); //S5
       break;
     case 4:
       break;
     case 5:
       bitClear(PORTB, 3); //S4
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 0); //S1
       break;
     case 6:
@@ -231,18 +248,21 @@ ISR(TIMER3_COMPB_vect) {
   switch (sector) {
     case 1:
       bitClear(PORTB, 1); //S3
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 4); //S6
       break;
     case 2:
       break;
     case 3:
       bitClear(PORTB, 2); //S5
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 5); //S2
       break;
     case 4:
       break;
     case 5:
       bitClear(PORTB, 0); //S1
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 3); //S4
       break;
     case 6:
@@ -266,26 +286,32 @@ ISR(TIMER4_COMPA_vect) {
   switch (sector) {
     case 1:
       bitClear(PORTB, 5); //S2
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 2); //S5
       break;
     case 2:
       bitClear(PORTB, 5); //S2
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 2); //S5
       break;
     case 3:
       bitClear(PORTB, 3); //S4
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 0); //S1
       break;
     case 4:
       bitClear(PORTB, 3); //S4
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 0); //S1
       break;
     case 5:
       bitClear(PORTB, 4); //S6
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 1); //S3
       break;
     case 6:
       bitClear(PORTB, 4); //S6
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 1); //S3
       break;
   }
@@ -297,26 +323,32 @@ ISR(TIMER4_COMPB_vect) {
   switch (sector) {
     case 1:
       bitClear(PORTB, 2); //S5
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 5); //S2
       break;
     case 2:
       bitClear(PORTB, 2); //S5
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 5); //S2
       break;
     case 3:
       bitClear(PORTB, 0); //S1
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 3); //S4
       break;
     case 4:
       bitClear(PORTB, 0); //S1
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 3); //S4
       break;
     case 5:
       bitClear(PORTB, 1); //S3
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 4); //S6
       break;
     case 6:
       bitClear(PORTB, 1); //S3
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 4); //S6
       break;
   }
@@ -340,18 +372,21 @@ ISR(TIMER5_COMPA_vect) {
       break;
     case 2:
       bitClear(PORTB, 3); //S4
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 0); //S1
       break;
     case 3:
       break;
     case 4:
       bitClear(PORTB, 4); //S6
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 1); //S3
       break;
     case 5:
       break;
     case 6:
       bitClear(PORTB, 5); //S2
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 2); //S5
       break;
   }
@@ -365,18 +400,21 @@ ISR(TIMER5_COMPB_vect) {
       break;
     case 2:
       bitClear(PORTB, 0); //S1
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 3); //S4
       break;
     case 3:
       break;
     case 4:
       bitClear(PORTB, 1); //S3
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 4); //S6
       break;
     case 5:
       break;
     case 6:
       bitClear(PORTB, 2); //S5
+      delayMicroseconds(delayUS);
       bitSet(PORTB, 5); //S2
       break;
   }
